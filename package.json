@@ -4,7 +4,7 @@
   "description": "template for any libraries",
   "main": "src/index.js",
   "scripts": {
-    "build": "rimraf ./build && babel src -s -d build",
+    "build": "rimraf ./dist && babel src -s -d dist --source-maps",
     "test": "cross-env NODE_ENV=test mocha --recursive \"test/**/*.test.js\"",
     "lint": "eslint --ignore-path .eslintignore .",
     "lint:fix": "npm run lint -- --fix",
