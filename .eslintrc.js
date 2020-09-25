@@ -5,6 +5,7 @@ const prettierOptions = JSON.parse(
 )
 
 module.exports = {
+  parser: "babel-eslint",
   parserOptions: {
     allowImportExportEverywhere: false,
   },
@@ -15,12 +16,17 @@ module.exports = {
     es6: true,
   },
   rules: {
-    "no-underscore-dangle": "off",
     "prettier/prettier": [2, prettierOptions],
-    "no-console": "off",
+    "no-console": "error",
     "func-names": ["error", "never"],
-    quotes: ["error", "double"],
+    quotes: ["error", "single"],
     semi: ["error", "never"],
+    "import/prefer-default-export": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+    "max-len": "off",
+    "linebreak-style": "off",
+    "func-names": ["error", "never"],
   },
   plugins: ["prettier", "mocha"],
 }
