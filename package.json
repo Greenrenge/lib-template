@@ -2,7 +2,7 @@
   "name": "@greenrenge/lib-template",
   "version": "1.0.0",
   "description": "template for any libraries",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rimraf ./dist && babel src -s -d dist --source-maps",
     "test": "cross-env NODE_ENV=test mocha --recursive \"test/**/*.test.js\"",
@@ -63,5 +63,9 @@
     "rimraf": "^3.0.2",
     "sinon": "^9.0.2",
     "sinon-chai": "^3.5.0"
-  }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }
